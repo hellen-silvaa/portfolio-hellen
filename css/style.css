@@ -390,6 +390,67 @@ footer {
     .menu-hamburber {
         display: block;
     }
+
+    .nav {
+        display: none;
+    }
+
+    header {
+        background-color: var(--color-01)
+            /* TEST */
+    }
+}
+
+/* Extra Small (sm): Smartphone (landscape) */
+
+@media (min-width: 576px) {
+
+
+
+    header {
+        background-color: var(--color-02);
+        /* TEST */
+    }
+
+}
+
+/* Medium (md):Tablet */
+
+@media (min-width: 768px) {
+
+
+
+    header {
+        background-color: var(--color-03);
+        /* TEST */
+    }
+
+}
+
+/* Large (lg):Notebook */
+
+@media (min-width: 992px) {
+
+
+
+    header {
+        background-color: var(--color-04);
+        /* TEST */
+    }
+
+}
+
+/* Extra Large (xl): Desktop */
+
+@media (min-width: 1200px) {
+
+
+
+    header {
+        background-color: var(--color-05);
+        /* TEST */
+    }
+
 }
 
 /* ===== \media queries ===== */
