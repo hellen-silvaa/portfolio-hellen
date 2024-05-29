@@ -175,7 +175,7 @@ span {
 }
 
 .services-container,
-.services-box:houver {
+.services-box:hover {
     border-color: var(--main-color);
     transform: scale(1.01);
 }
@@ -199,3 +199,24 @@ span {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* ===== button ===== */
+.btn {
+    display: inline-block;
+    padding: 0.7 1.8rem;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    color: var(--bg-color-02);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease;
+    margin-top: 1.2 rem;
+}
+
+.btn:hover {
+    box-shadow: 0 0 0.3rem var(--main-color);
+    background-color: inherit;
+    color: var(--main-color);
+}
+
+/* ===== \button ===== */
