@@ -200,6 +200,32 @@ span {
     text-overflow: ellipsis;
 }
 
+.portifolio {
+    background-color: var(--bg-color-02);
+}
+
+.portifolio-container {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.portifolio-box {
+    position: relative;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0.6rem var(--bg-color-01);
+    /* overflow: hidden;
+    display: flex; */
+}
+
+.portifolio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.portifolio-box img:hover {
+    transform: scale(1.1);
+}
+
 /* ===== button ===== */
 .btn {
     display: inline-block;
