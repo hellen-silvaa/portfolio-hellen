@@ -101,8 +101,43 @@ span {
     border-image: linear-gradient(135deg, transparent 50%, var(--main-color))
 }
 
+.about-img {
+    border-left: solid 0.6rem var(--main-color);
+    border-bottom: solid 0.6rem var(--main-color);
+    border-image: linear-gradient(225deg, transparent 50%, var(--main-color))
+}
+
 .home-img img,
 .about-img img {
     width: 100%;
+}
 
+.about {
+    background-color: var(--bg-color-02);
+}
+
+.home-content,
+.about-content {
+    width: 45%;
+}
+
+.home-content h1,
+.about-content h1 {
+    font-weight: 700;
+    line-height: 1.3;
+
+    font-size: 2.7rem;
+    /*test*/
+}
+
+.home-content h3,
+.about-content h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.home-content p,
+.about-content p {
+    margin-top: 1.2rem;
+    text-align: justify;
 }
