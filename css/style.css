@@ -377,7 +377,19 @@ footer {
 }
 
 .change .bar3 {
-    transform: translate(0, 0.65rem) rotate(45deg);
+    transform: translate(0, -0.65rem) rotate(45deg);
 }
 
 /* ===== \menu hamburger ===== */
+
+
+/* ===== media queries ===== */
+
+/* Extra Small (xs): Smartphone (portrait) */
+@media (min-width: 0px) {
+    .menu-hamburber {
+        display: block;
+    }
+}
+
+/* ===== \media queries ===== */
