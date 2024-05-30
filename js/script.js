@@ -15,3 +15,24 @@ function toggleMenu() {
         nav.style.display = 'none';
     }
 }
+
+class ForSubmit {
+    constructor(settings) {
+      this.settings = settings;
+      this.form = document.querySelector(settings.form);
+      this.formButton = document.querySelector(settings.button);
+      if (this.form){
+        this.url = this.form.getAttribute("action")
+      }  
+    }
+
+    displaySucces(){
+        this.form.innerHTML = this.settings.success;
+    }
+
+
+displayError(){
+    this.form.innerHTML = this.settings.error;
+
+}
+}
