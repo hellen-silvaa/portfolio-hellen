@@ -14,6 +14,7 @@ function toggleMenu() {
     } else {
         nav.style.display = 'none';
     }
+    this.sendForm = this.sendForm.bind(this);
 }
 
 class ForSubmit {
@@ -33,21 +34,44 @@ class ForSubmit {
 
 displayError(){
     this.form.innerHTML = this.settings.error;
+}
+
+getFormObject(){
+    const getFormObject = {};
+    const fields = this.form.querySelectorAll("[name]");
+    fields.forEach(field => {
+        formObject[field.getAttribute("name")] = field.value;
+    });
+    return formObject;
 
 }
-sendForm(){
-    fetch(this.url, {
+onSubmission(event){
+    event.preventDesault();
+    event.target.disabled = true;
+    event.target.innerText = "Enviando...";
+}
+
+async sendForm(evenet){
+    try{
+        this.onSubmission(event)
+    await fetch(this.url, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
         },
-        body: "",
+        body: JSON.stringify(this.getFormObject()),
     });
+    this.displaySucces();
+} catch{
+this.displayError();
+throw new Error(error);
+}
 }
 
 init(){
-    if(this.form) this.formButton.addEventListener("click", () => this.displaySucces());
+    if(this.form) 
+        this.formButton.addEventListener("click", this.sendForm);
     return this;
 }
 }
