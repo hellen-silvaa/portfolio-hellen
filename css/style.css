@@ -295,6 +295,16 @@ form textarea {
     resize: none;
 }
 
+.sucess, .error {
+    text-align: center;
+}
+.sucess {
+    color: greenyellow;
+}
+.error {
+    color: tomato;
+}
+
 footer {
     display: flex;
     flex-direction: row;
